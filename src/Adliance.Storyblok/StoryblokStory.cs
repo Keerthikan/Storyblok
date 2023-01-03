@@ -20,6 +20,7 @@ namespace Adliance.Storyblok
             CreatedAt = story.CreatedAt;
             PublishedAt = story.PublishedAt;
             FirstPublishedAt = story.FirstPublishedAt;
+            ParentId = story.ParentId;
             Id = story.Id;
             Uuid = story.Uuid;
             IsStartPage = story.IsStartPage;
@@ -48,6 +49,7 @@ namespace Adliance.Storyblok
         [JsonPropertyName("first_published_at")] public DateTime? FirstPublishedAt { get; set; }
 
         [JsonPropertyName("id")] public int Id { get; set; }
+        [JsonPropertyName("parent_id")] public int ParentId { get; set; }
         [JsonPropertyName("uuid")] public Guid Uuid { get; set; }
         [JsonPropertyName("content")] public StoryblokComponent Content { get; set; } = new StoryblokComponent();
 
